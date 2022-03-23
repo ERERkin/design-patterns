@@ -1,10 +1,12 @@
 package kg.erking.designpatterns.creationalPatterns.singleton;
 
 public class ThreadSafeSingleton {
-    private static ThreadSafeSingleton instance;
+    //add volatile
+    private volatile static ThreadSafeSingleton instance;
 
     private ThreadSafeSingleton(){}
 
+    //double check
     public static ThreadSafeSingleton getInstanceUsingDoubleLocking(){
         if(instance == null){
             synchronized (ThreadSafeSingleton.class) {
