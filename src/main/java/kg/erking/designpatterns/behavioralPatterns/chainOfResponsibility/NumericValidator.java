@@ -1,5 +1,6 @@
 package kg.erking.designpatterns.behavioralPatterns.chainOfResponsibility;
 
+//Has numeric
 public class NumericValidator extends Validator{
     @Override
     boolean checkText(String text) {
